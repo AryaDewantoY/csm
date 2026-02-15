@@ -1,0 +1,100 @@
+@import 'tailwindcss';
+
+@custom-variant dark (&:is(.dark *));
+
+@theme {
+  --container-screen-xl: 75rem;
+  --container-screen-2xl: 83.75rem;
+
+  --shadow-card: 0px 10px 30px -5px rgba(0, 0, 0, 0.1);
+  --shadow-testimonial: 0px 5px 10px 0px #5968760d;
+
+  /* --- PEMBERSIHAN SPACING --- */
+  /* Gunakan nilai yang masuk akal agar layout tidak terdorong jauh ke bawah */
+  --spacing-section: 5rem;    /* Pengganti py-20 standar */
+  --spacing-gap-lg: 4rem;
+  --spacing-gap-sm: 2rem;
+  
+  /* Hapus atau kecilkan variabel spacing raksasa yang tidak terpakai */
+  --spacing-25: 6.25rem; 
+  --spacing-29: 7.25rem;
+  --spacing-45: 11.25rem;
+  --spacing-50: 12.5rem;
+  --spacing-120: 15rem; 
+
+  --z-index-1: 1;
+  --z-index-999: 999;
+
+  --color-primary: #0066ff;
+  --color-darkmode: #00224a;
+  --color-grey: #f4f5f6;
+  --color-slate-900: #0f172a;
+  --color-slate-600: #475569;
+
+  --text-header: 3.5rem;
+  --text-subheader: 2.5rem;
+}
+
+html {
+  scroll-behavior: smooth !important;
+}
+
+@layer base {
+  *, ::after, ::before {
+    border-color: var(--color-slate-200, currentColor);
+  }
+
+  /* --- SECTION ADAPTIF --- */
+  section {
+    /* Padding dinamis: lebih kecil di mobile, standar di desktop */
+    @apply py-12 md:py-20;
+    width: 100%;
+    position: relative;
+    /* Menghilangkan paksaan tinggi minimal agar tidak ada ruang kosong */
+    min-height: auto; 
+  }
+
+  /* --- TYPOGRAPHY MODERN --- */
+  h1 {
+    @apply text-slate-900 text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight mb-6;
+  }
+
+  h2 {
+    @apply text-slate-900 text-3xl lg:text-4xl font-bold tracking-tight mb-4;
+  }
+
+  h5 {
+    /* Bagus untuk nama produk agar tetap kompak */
+    @apply text-slate-900 text-lg lg:text-xl font-bold uppercase tracking-wider;
+  }
+
+  p {
+    /* Memastikan paragraf tidak membuat jarak antar elemen terlalu jauh */
+    @apply text-slate-600 leading-relaxed mb-4;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+  /* Mencegah scroll horizontal tanpa membuat halaman terasa 'terkunci' */
+  overflow-x: hidden;
+  height: -webkit-fill-available;
+}
+
+body {
+  /* Memastikan background mengikuti konten tanpa celah */
+  @apply bg-white text-slate-900;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* --- PERBAIKAN KHUSUS UNTUK HALAMAN YANG SEDIKIT KONTEN --- */
+main {
+  flex: 1 0 auto;
+}
+
+/* Hapus class bg-joinus jika kontennya sudah tidak ada untuk menghemat beban render */
+.bg-joinus {
+  display: none;
+}
