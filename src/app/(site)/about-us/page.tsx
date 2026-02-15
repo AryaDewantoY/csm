@@ -8,8 +8,6 @@ const AboutUsDetail = () => {
   return (
     <main className="bg-white min-h-screen font-sans">
       
-      {/* SECTION 1: HERO / DETAIL PROFILE */}
-      {/* Tambahkan id='about-section' jika ini adalah target dari menu 'About Us' */}
       <section id="about-section" className="py-20 lg:py-28">
         <div className="container mx-auto max-w-7xl px-6">
           <div className="grid lg:grid-cols-2 gap-16 items-center">

@@ -17,7 +17,7 @@ const headerData: HeaderItem[] = [
 ]
 
 // about data
-export const Aboutdata: aboutdata[] = [
+const Aboutdata: aboutdata[] = [
   {
     heading: 'About Us.',
     slug: 'about-us', 
