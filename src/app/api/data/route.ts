@@ -11,8 +11,8 @@ import { footerlinks } from '@/app/types/footerlinks'
 // header nav-links data
 const headerData: HeaderItem[] = [
   { label: 'Home', href: '/' },
-  { label: 'About Us', href: '/#about-section' }, // Tambahkan / sebelum #
-  { label: 'Store', href: '/#team-section' },    // Sesuaikan ID dengan yang ada di Home
+  { label: 'About Us', href: '/#about-section' }, 
+  { label: 'Store', href: '/#team-section' },  
   { label: 'Partnership', href: '/#client-section' },
 ]
 
