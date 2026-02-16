@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   description: 'Mitra Strategis Suku Cadang Alat Berat & Pertambangan',
   icons: {
     icon: '/images/beliefs/swirls.svg', 
-    apple: '/apple-touch-icon.png', 
+    apple: '/images/beliefs/swirls.svg', 
   },
 }
 

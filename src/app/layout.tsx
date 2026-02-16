@@ -25,12 +25,18 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en' suppressHydrationWarning>
-      <body className={`${font.className}`}>
+      <body className={`${font.className} antialiased`}>
+      
+        <Header />
+        <div className="h-[92px] lg:h-[116px] w-full" />
+
         <Aoscompo>
-          <Header />
-          {children}
+          <main>
+            {children}
+          </main>
           <Footer />
         </Aoscompo>
+        
         <ScrollToTop />
       </body>
     </html>

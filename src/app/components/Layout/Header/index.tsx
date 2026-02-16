@@ -65,8 +65,6 @@ const Header: React.FC = () => {
     }
   }, [isSignInOpen, isSignUpOpen, navbarOpen])
 
-  // header data fetch
-
   const [headerData, setHeaderData] = useState<HeaderItem[]>([])
 
   useEffect(() => {
@@ -82,7 +80,6 @@ const Header: React.FC = () => {
     }
     fetchData()
   }, [])
-
   return (
     <header
       className={`fixed top-0 z-40 w-full transition-all duration-300 border-b border-black/10 ${
@@ -105,56 +102,7 @@ const Header: React.FC = () => {
             className={`flex items-center gap-4 pl-16 lg:border-l border-black/10 duration-300 ${
               sticky ? 'py-3' : 'py-7'
             }`}>
-            {/* <button
-              className='hidden lg:block bg-transparent text-darkmode border hover:bg-darkmode border-darkmode hover:text-white px-4 py-2 rounded-lg hover:cursor-pointer'
-              onClick={() => {
-                setIsSignInOpen(true)
-              }}>
-              Sign In
-            </button>
-            {isSignInOpen && (
-              <div className='fixed top-0 left-0 w-full h-full bg-black/50 flex items-center justify-center z-50'>
-                <div
-                  ref={signInRef}
-                  className='relative mx-auto w-full max-w-md bg-white overflow-hidden rounded-lg px-8 pt-14 pb-8 text-center bg-dark_grey/90 backdrop-blur-md'>
-                  <button
-                    onClick={() => setIsSignInOpen(false)}
-                    className='absolute top-0 right-0 mr-8 mt-8 dark:invert'
-                    aria-label='Close Sign In Modal'>
-                    <Icon
-                      icon='tabler:currency-xrp'
-                      className='text-black hover:text-primary text-24 inline-block me-2 cursor-pointer'
-                    />
-                  </button>
-                  <Signin />
-                </div>
-              </div>
-            )}
-            <button
-              className='hidden lg:block bg-darkmode text-white hover:bg-transparent hover:text-darkmode border border-darkmode px-4 py-2 rounded-lg hover:cursor-pointer'
-              onClick={() => {
-                setIsSignUpOpen(true)
-              }}>
-              Sign Up
-            </button>
-            {isSignUpOpen && (
-              <div className='fixed top-0 left-0 w-full h-full bg-black/50 flex items-center justify-center z-50'>
-                <div
-                  ref={signUpRef}
-                  className='relative mx-auto w-full max-w-md overflow-hidden bg-white rounded-lg bg-dark_grey/90 backdrop-blur-md px-8 pt-14 pb-8 text-center'>
-                  <button
-                    onClick={() => setIsSignUpOpen(false)}
-                    className='absolute top-0 right-0 mr-8 mt-8 dark:invert'
-                    aria-label='Close Sign Up Modal'>
-                    <Icon
-                      icon='tabler:currency-xrp'
-                      className='text-black hover:text-primary text-24 inline-block me-2 cursor-pointer'
-                    />
-                  </button>
-                  <SignUp />
-                </div>
-              </div>
-            )} */}
+          
             <button
               onClick={() => setNavbarOpen(!navbarOpen)}
               className='block lg:hidden p-2 rounded-lg'
@@ -190,26 +138,6 @@ const Header: React.FC = () => {
                 <MobileHeaderLink key={index} item={item} />
               )
             )}
-            <div className='mt-4 flex flex-col space-y-4 w-full'>
-              <Link
-                href='/'
-                className='bg-transparent border border-primary text-primary px-4 py-2 rounded-lg hover:bg-blue-600 hover:text-white'
-                onClick={() => {
-                  setIsSignInOpen(true)
-                  setNavbarOpen(false)
-                }}>
-                Sign In
-              </Link>
-              <Link
-                href='/'
-                className='bg-primary text-white px-4 py-2 rounded-lg hover:bg-blue-700'
-                onClick={() => {
-                  setIsSignUpOpen(true)
-                  setNavbarOpen(false)
-                }}>
-                Sign Up
-              </Link>
-            </div>
           </nav>
         </div>
       </div>
