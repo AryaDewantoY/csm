@@ -33,7 +33,7 @@ const Footer = () => { // Gunakan PascalCase untuk nama komponen
             {/* 2. PERBAIKAN FONT: text-3xl diubah menjadi text-xl (mobile) agar tidak pecah baris terlalu banyak */}
             <h4 className='text-white text-xl md:text-2xl font-bold leading-tight mb-6 lg:mb-10 uppercase'>
               PT. CIPTA SEMANGAT MAJU <br />
-              <span className='text-sm font-normal text-gray-400'>PART & SUPPLIES</span>
+              <span className='text-sm font-normal text-gray-400'>PARTS & SUPPLIES</span>
             </h4>
             
             <div className='flex items-center gap-4'>
