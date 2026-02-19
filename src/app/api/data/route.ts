@@ -22,22 +22,22 @@ const Aboutdata: aboutdata[] = [
     heading: 'About Us.',
     slug: 'about-us', 
     imgSrc: '/images/aboutus/imgOne.svg',
-    paragraph: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem...',
-    link: 'Learn more',
+    paragraph: 'Tim kami selalu siap membantu memberikan penjelasan detail agar Anda mendapatkan solusi terbaik sesuai kebutuhan.',
+    link: 'Klik Disini',
   },
   {
     heading: 'Spare-part.',
     slug: 'services', 
     imgSrc: '/images/aboutus/imgTwo.svg',
-    paragraph: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem...',
-    link: 'Learn more',
+    paragraph: 'Kami menyediakan berbagai spare-part original dan berkualitas tinggi untuk memastikan performa dan daya tahan perangkat.',
+    link: 'Klik Disini',
   },
   {
     heading: 'Office.',
     slug: 'our-works',
     imgSrc: '/images/aboutus/imgThree.svg',
-    paragraph: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem...',
-    link: 'Learn more',
+    paragraph: 'Kami siap memberikan pelayanan terbaik mulai dari konsultasi produk hingga dukungan teknis. Kunjungi kantor kami untuk mendapatkan solusi yang cepat, tepat, dan terpercaya.',
+    link: 'Klik Disni',
   },
 ]
 
